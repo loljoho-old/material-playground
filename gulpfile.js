@@ -1,6 +1,4 @@
-/**
- * Custom `gulpfile.js` based off the one found in Google's Web Starter Kit.
- */
+
 var gulp        = require('gulp');
 var $           = require('gulp-load-plugins')();
 var del         = require('del');
@@ -10,40 +8,30 @@ var pagespeed   = require('psi');
 var reload      = browserSync.reload;
 var paths       = require('./gulp.config.json')
 
-var AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
-];
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+      baseDir: 'src'
+    }
+  })
+});
+
+
+
+
+// Watch Function
+gulp.task('watch', function() {
+  gulp.watch(paths.scripts, ['scripts']);
+  gulp.watch(paths.fonts, ['fonts']);
+  gulp.watch(paths.images, ['images']);
+});
+
+// Default Gulp
+gulp.task('default', ['watch', 'scripts', 'images']);
 
 /**
- * Detecting JS code errors with JSHint
- */
-gulp.task('jshint', function () {
-  return gulp.src(paths.scripts)
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-});
-
-// Optimize Images
-gulp.task('images', function () {
-  return gulp.src(paths.images)
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true
-    })))
-    .pipe(gulp.dest('dist/images'))
-    .pipe($.size({title: 'images'}));
-});
-
+ * Custom `gulpfile.js` based off the one found in Google's Web Starter Kit.
+ *
 // Copy All Files At The Root Level (app)
 gulp.task('copy', function () {
   return gulp.src(paths.root)
@@ -164,3 +152,4 @@ gulp.task('pagespeed', function (cb) {
 
 // Load custom tasks from the `tasks` directory
 // try { require('require-dir')('tasks'); } catch (err) { console.error(err); }
+*/

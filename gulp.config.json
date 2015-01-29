@@ -8,12 +8,16 @@
   "img":      "src/assets/images/*",
   "tpls":     "src/app/**/*.html",
   "styles": [
-    "src/assets/styles/*.css",
-    "src/bower_components/**/*.min.css"
+    "src/assets/styles/*.css"
   ],
   "scripts": [
     "src/app/**/*module*.js",
-    "src/app/**/*.js",
+    "src/app/**/*.js"
+  ],
+  "vendorScripts": [
     "src/bower_components/**/*.min.js"
+  ],
+  "vendorStyles": [
+    "src/bower_components/**/*.min.css"
   ]
 }
