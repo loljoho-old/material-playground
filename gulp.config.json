@@ -1,0 +1,19 @@
+{
+  "dest":     "dist/",
+  "root":     "src/",
+  "fonts":    [
+    "src/bower_components/font-awesome/fonts/**/*.*"
+  ], 
+  "html":     "src/**/*.html",
+  "img":      "src/assets/images/*",
+  "tpls":     "src/app/**/*.html",
+  "styles": [
+    "src/assets/styles/*.css",
+    "src/bower_components/**/*.min.css"
+  ],
+  "scripts": [
+    "src/app/**/*module*.js",
+    "src/app/**/*.js",
+    "src/bower_components/**/*.min.js"
+  ]
+}

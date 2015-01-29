@@ -12,6 +12,10 @@ Links
  - [ngbp/ngbp](https://github.com/ngbp/ngbp/tree/v0.3.2-release/src/app)
  - [Layout - Angular-Material](https://material.angularjs.org/#/layout/options)
 
+To-Do List:
+ - [ ] Implement `"start"` and `"test"` in `package.json`
+   - [ ] `"start"` - serve?
+   - [ ] `"test"` - gulp/grunt testing?
 
 ## File Structure - Proposed
 ```
@@ -23,6 +27,7 @@ Links
 │   │       └── main.css
 │   └── index.html
 ├── test/
+├── .bowerrc  
 ├── .gitignore
 ├── CHANGELOG.md
 ├── README.md

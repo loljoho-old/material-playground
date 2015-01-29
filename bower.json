@@ -1,0 +1,38 @@
+{
+  "name": "material-playground",
+  "version": "0.1.2",
+  "description": "Playing around with Angular-Material.",
+  "authors": [
+    "Joho <joho@joho.us>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/loljoho/material-playground",
+  "keywords": [
+    "material",
+    "design",
+    "style",
+    "angular",
+    "javascript"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.11",
+    "angular-animate": "~1.3.11",
+    "angular-aria": "~1.3.11",
+    "angular-cookies": "~1.3.11",
+    "angular-resource": "~1.3.11",
+    "angular-ui-router": "~0.2.13",
+    "font-awesome": "~4.3.0",
+    "hammerjs": "~2.0.4",
+    "angular-material": "master"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.11"
+  }
+}
